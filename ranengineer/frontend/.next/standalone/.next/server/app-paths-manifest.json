@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/alarms/page": "app/alarms/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/chat/page": "app/chat/page.js",
+  "/cells/page": "app/cells/page.js",
+  "/anomalies/page": "app/anomalies/page.js",
+  "/digital-twin/page": "app/digital-twin/page.js",
+  "/datasets/[id]/page": "app/datasets/[id]/page.js",
+  "/cells/[id]/page": "app/cells/[id]/page.js",
+  "/datasets/page": "app/datasets/page.js",
+  "/incidents/page": "app/incidents/page.js",
+  "/settings/page": "app/settings/page.js",
+  "/knowledge/page": "app/knowledge/page.js",
+  "/oran/page": "app/oran/page.js",
+  "/page": "app/page.js"
+}

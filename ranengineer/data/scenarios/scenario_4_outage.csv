@@ -1,0 +1,4 @@
+cell_id,site_id,technology,RSRP,RSRQ,SINR,CQI,DL_Throughput,UL_Throughput,PRB_Utilization,Availability,Call_Drop_Rate,Handover_Success_Rate,Latency,Packet_Loss,notes
+CELL_OUTAGE_04,SITE_METRO,5G_NR,-140,-25,-10,0,0.0,0.0,0,0.0,10.0,0.0,999,8.5,Cell total outage and fronthaul packet loss
+CELL_NORMAL_04,SITE_METRO,5G_NR,-78,-8,20,13,115.0,42.0,38,99.9,0.1,99.2,9,0.05,Normal reference sector
+

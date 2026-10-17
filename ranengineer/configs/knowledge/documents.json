@@ -1,0 +1,51 @@
+[
+  {
+    "id": "3GPP-LTE-001",
+    "title": "4G LTE Coverage & Interference Mitigation (3GPP TS 36.300)",
+    "domain": "4G LTE",
+    "keywords": ["rsrp", "sinr", "cqi", "interference", "coverage", "overshooting", "icic"],
+    "source": "3GPP TS 36.300 Release 15",
+    "content": "In 4G LTE systems, reference signal received power (RSRP) below -110 dBm coupled with SINR below 0 dB indicates severe edge coverage or co-channel interference. Mitigations: 1) Down-tilt antenna mechanically or electrically (RET) to constrain cell radius. 2) Implement Inter-Cell Interference Coordination (ICIC) on cell edge resource blocks. 3) Verify antenna azimuth alignment to resolve sector cross-feeder issues."
+  },
+  {
+    "id": "3GPP-5G-002",
+    "title": "5G NR Massive MIMO & Beamforming Optimization (3GPP TS 38.300)",
+    "domain": "5G NR",
+    "keywords": ["beamforming", "massive mimo", "ssb", "csi-rs", "tilt", "throughput", "nr"],
+    "source": "3GPP TS 38.300 Release 17",
+    "content": "5G NR beamforming utilizes Synchronization Signal Block (SSB) sweeping and Channel State Information Reference Signals (CSI-RS) to target user equipment. Poor CQI (<7) despite acceptable RSRP indicates pilot pollution or beam mispointing. Mitigations: 1) Adjust vertical and horizontal half-power beamwidths (HPBW). 2) Optimize digital beam tilts. 3) Reconfigure SSB transmit power offsets."
+  },
+  {
+    "id": "ORAN-RIC-003",
+    "title": "O-RAN Non-RT RIC & A1 Interface Architecture (O-RAN.WG2)",
+    "domain": "O-RAN",
+    "keywords": ["o-ran", "non-rt ric", "a1", "rapp", "traffic steering", "policy", "smo"],
+    "source": "O-RAN Alliance Working Group 2 (WG2) A1 Specification v05.00",
+    "content": "The Non-RT RIC within the Service Management and Orchestration (SMO) layer provides machine-learning driven optimization to the Near-RT RIC over the A1 interface. A1 policies support declarative intent guidance: 1) Traffic steering policies to offload congested macro cells. 2) Quality of Experience (QoE) target thresholds. 3) Energy saving carrier shutdown windows during low-traffic periods. rApps execute within Non-RT RIC on control loops >1s."
+  },
+  {
+    "id": "3GPP-MOBILITY-004",
+    "title": "RAN Mobility & Handover Optimization (3GPP TS 36.331 / TS 38.331)",
+    "domain": "Mobility",
+    "keywords": ["handover", "drop rate", "a3 event", "time to trigger", "hysteresis", "ping-pong", "anr"],
+    "source": "3GPP TS 36.331 / 38.331",
+    "content": "Handover failures directly cause elevated Call Drop Rates (CDR). Measurement event A3 (Neighbor becomes offset better than SpCell) is governed by A3-offset, Time-to-Trigger (TTT), and Hysteresis. Ping-pong handovers occur when TTT is too short (<160ms) or hysteresis is too low (<2dB). Early handovers cause drops on target cell; late handovers cause radio link failure (RLF) on source cell. Automatic Neighbor Relations (ANR) must be audited to purge blacklisted or ghost neighbor cells."
+  },
+  {
+    "id": "3GPP-CAPACITY-005",
+    "title": "PRB Utilization & Congestion Management (3GPP TS 28.552)",
+    "domain": "Capacity",
+    "keywords": ["prb", "congestion", "carrier aggregation", "admission control", "scheduler", "load balancing"],
+    "source": "3GPP TS 28.552 Management and Orchestration 5G KPIs",
+    "content": "Physical Resource Block (PRB) utilization exceeding 85% causes packet queuing and downlink throughput collapse. Engineering actions: 1) Activate or tune Carrier Aggregation (CA) primary/secondary cell priorities to shift data users to high-band carriers (e.g. 2.6 GHz / 3.5 GHz). 2) Adjust proportional fair scheduler parameters. 3) Lower Call Admission Control (CAC) user connection thresholds. 4) Split heavily congested cells into multi-sector configurations."
+  },
+  {
+    "id": "TRANSPORT-FRONTHAUL-006",
+    "title": "O-RAN Fronthaul & eCPRI Transport Synchronization",
+    "domain": "Transport",
+    "keywords": ["transport", "ecpri", "fronthaul", "packet loss", "latency", "jitter", "ptp", "ieee 1588"],
+    "source": "O-RAN Working Group 4 Fronthaul Specification",
+    "content": "Split 7.2x O-RAN networks require strict one-way latency (<100 microseconds) and jitter (<32ns) between O-DU and O-RU across eCPRI. Packet loss exceeding 0.1% or PTP IEEE 1588 time synchronization drift causes abrupt cell unavailability alarms and severe throughput drops. Verify fiber SFP transceivers, SyncE boundary clocks, and QoS prioritization (DSCP 46 EF) across packet switches."
+  }
+]
+

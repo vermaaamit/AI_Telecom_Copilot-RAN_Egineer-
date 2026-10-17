@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+th, td { padding: .85rem 1.25rem; white-space: nowrap; }
+.badge { display: inline-flex; border-radius: 999px; padding: .22rem .55rem; font-size: .65rem; font-weight: 700; letter-spacing: .04em; }
+.badge.healthy { background: rgb(19 78 74); color: rgb(94 234 212); }.badge.warning { background: rgb(120 53 15); color: rgb(253 230 138); }.badge.critical { background: rgb(127 29 29); color: rgb(254 202 202); }.badge.unknown { background: rgb(51 65 85); color: rgb(203 213 225); }

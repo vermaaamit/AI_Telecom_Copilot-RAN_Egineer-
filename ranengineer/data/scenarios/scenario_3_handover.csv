@@ -1,0 +1,4 @@
+cell_id,site_id,technology,RSRP,RSRQ,SINR,CQI,DL_Throughput,UL_Throughput,PRB_Utilization,Availability,Call_Drop_Rate,Handover_Success_Rate,Latency,Packet_Loss,notes
+CELL_HANDOVER_03,SITE_HIGHWAY,LTE,-88,-10,12,9,42.0,15.0,52,99.2,4.5,82.0,22,0.6,Mobility failure and ping-pong handovers on highway corridor
+CELL_NORMAL_03,SITE_HIGHWAY,LTE,-84,-9,15,11,64.0,24.0,46,99.8,0.3,98.5,17,0.1,Normal reference sector
+

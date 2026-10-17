@@ -1,0 +1,132 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [
+    {
+      "page": "/cells/[id]",
+      "regex": "^/cells/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/cells/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/datasets/[id]",
+      "regex": "^/datasets/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/datasets/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/alarms",
+      "regex": "^/alarms(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/alarms(?:/)?$"
+    },
+    {
+      "page": "/anomalies",
+      "regex": "^/anomalies(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/anomalies(?:/)?$"
+    },
+    {
+      "page": "/cells",
+      "regex": "^/cells(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cells(?:/)?$"
+    },
+    {
+      "page": "/chat",
+      "regex": "^/chat(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/chat(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/datasets",
+      "regex": "^/datasets(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/datasets(?:/)?$"
+    },
+    {
+      "page": "/digital-twin",
+      "regex": "^/digital\\-twin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/digital\\-twin(?:/)?$"
+    },
+    {
+      "page": "/incidents",
+      "regex": "^/incidents(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/incidents(?:/)?$"
+    },
+    {
+      "page": "/knowledge",
+      "regex": "^/knowledge(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/knowledge(?:/)?$"
+    },
+    {
+      "page": "/oran",
+      "regex": "^/oran(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/oran(?:/)?$"
+    },
+    {
+      "page": "/settings",
+      "regex": "^/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/settings(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": []
+}

@@ -1,0 +1,14 @@
+{
+  "rsrp": {"aliases": ["rsrp", "rsrp_dbm", "avg_rsrp"], "unit": "dBm", "direction": "higher_is_better", "good": -90, "warning": -105, "weight": 20},
+  "rsrq": {"aliases": ["rsrq", "rsrq_db"], "unit": "dB", "direction": "higher_is_better", "good": -10, "warning": -15, "weight": 5},
+  "sinr": {"aliases": ["sinr", "sinr_db"], "unit": "dB", "direction": "higher_is_better", "good": 15, "warning": 5, "weight": 20},
+  "cqi": {"aliases": ["cqi", "avg_cqi"], "unit": "index", "direction": "higher_is_better", "good": 10, "warning": 6, "weight": 5},
+  "dl_throughput": {"aliases": ["dl_throughput", "dl_throughput_mbps", "downlink_throughput"], "unit": "Mbps", "direction": "higher_is_better", "good": 20, "warning": 5, "weight": 20},
+  "ul_throughput": {"aliases": ["ul_throughput", "ul_throughput_mbps", "uplink_throughput"], "unit": "Mbps", "direction": "higher_is_better", "good": 5, "warning": 1, "weight": 5},
+  "prb_utilization": {"aliases": ["prb", "prb_utilization", "prb_utilization_percent", "prb_utilization_pct"], "unit": "percent", "direction": "lower_is_better", "good": 70, "warning": 90, "weight": 10},
+  "availability": {"aliases": ["availability", "cell_availability", "availability_pct"], "unit": "percent", "direction": "higher_is_better", "good": 99.5, "warning": 98, "weight": 15},
+  "call_drop_rate": {"aliases": ["call_drop_rate", "cdr", "drop_rate", "drop_rate_pct"], "unit": "percent", "direction": "lower_is_better", "good": 0.5, "warning": 2, "weight": 15},
+  "handover_success_rate": {"aliases": ["handover_success_rate", "hosr", "ho_success_rate"], "unit": "percent", "direction": "higher_is_better", "good": 98, "warning": 95, "weight": 5},
+  "latency": {"aliases": ["latency", "latency_ms"], "unit": "ms", "direction": "lower_is_better", "good": 50, "warning": 100, "weight": 5},
+  "packet_loss": {"aliases": ["packet_loss", "packet_loss_percent", "packet_loss_pct"], "unit": "percent", "direction": "lower_is_better", "good": 1, "warning": 3, "weight": 5}
+}

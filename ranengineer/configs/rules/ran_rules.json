@@ -1,0 +1,366 @@
+{
+  "rules": [
+    {
+      "rule_id": "RULE_COV_001",
+      "name": "Weak Signal Coverage (RSRP Degradation)",
+      "category": "Coverage",
+      "conditions": [
+        {
+          "kpi": "rsrp",
+          "operator": "<",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "WARNING",
+      "explanation": "Reference Signal Received Power (RSRP) is below acceptable link budget limits, indicating excessive path loss, cell-edge attenuation, or antenna misalignment.",
+      "recommended_checks": [
+        "Verify antenna physical tilt (mechanical/electrical) and azimuth",
+        "Inspect RF feeder cables and connectors for VSWR or insertion loss",
+        "Check radio remote unit (RRU) transmit power configuration and PA alarms",
+        "Perform drive-test or review minimization of drive tests (MDT) coverage map"
+      ]
+    },
+    {
+      "rule_id": "RULE_COV_002",
+      "name": "Severe Signal Power Loss (Critical RSRP)",
+      "category": "Coverage",
+      "conditions": [
+        {
+          "kpi": "rsrp",
+          "operator": "<",
+          "threshold_status": ["CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "CRITICAL",
+      "explanation": "Critical RSRP level indicates severe coverage hole or near-outage conditions at the cell perimeter.",
+      "recommended_checks": [
+        "Check for physical radio or jumper cable failure",
+        "Verify neighbor cell transmission to rule out local shadowing or new structural obstruction",
+        "Assess if sector carrier output power has fallen into low-power safe mode"
+      ]
+    },
+    {
+      "rule_id": "RULE_COV_003",
+      "name": "Degraded Reference Signal Quality (RSRQ)",
+      "category": "Coverage",
+      "conditions": [
+        {
+          "kpi": "rsrq",
+          "operator": "<",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "WARNING",
+      "explanation": "Reference Signal Received Quality (RSRQ) is degraded, indicating excessive interference from neighboring cells or high channel loading relative to received carrier power.",
+      "recommended_checks": [
+        "Examine neighbor cell interference and PCI (Physical Cell ID) mod-3 / mod-30 collisions",
+        "Review wideband noise rise and external interference profiles",
+        "Verify cell loading across adjacent carriers"
+      ]
+    },
+    {
+      "rule_id": "RULE_QLT_001",
+      "name": "Severe Radio Interference (SINR Degradation)",
+      "category": "Quality",
+      "conditions": [
+        {
+          "kpi": "sinr",
+          "operator": "<",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "WARNING",
+      "explanation": "Signal-to-Interference-plus-Noise Ratio (SINR) is degraded, causing poor demodulation efficiency, elevated block error rates (BLER), and lower MCS orders.",
+      "recommended_checks": [
+        "Audit PCI distribution and check for co-channel PCI collisions or confusions",
+        "Inspect uplink/downlink RSSI for external RF interference or passive intermodulation (PIM)",
+        "Optimize inter-cell interference coordination (ICIC) or beamforming parameters"
+      ]
+    },
+    {
+      "rule_id": "RULE_QLT_002",
+      "name": "Poor Channel Quality Indicator (CQI Collapse)",
+      "category": "Quality",
+      "conditions": [
+        {
+          "kpi": "cqi",
+          "operator": "<",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "WARNING",
+      "explanation": "Channel Quality Indicator reported by UEs is abnormally low, forcing the baseband scheduler down to QPSK modulation.",
+      "recommended_checks": [
+        "Cross-correlate CQI reporting with downlink BLER and rank-2/rank-4 MIMO usage",
+        "Verify multi-antenna transmission mode and spatial multiplexing health",
+        "Inspect environmental multipath conditions and Doppler spread"
+      ]
+    },
+    {
+      "rule_id": "RULE_CAP_001",
+      "name": "High Physical Resource Block Utilization (PRB Saturation)",
+      "category": "Capacity",
+      "conditions": [
+        {
+          "kpi": "prb_utilization",
+          "operator": ">",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "WARNING",
+      "explanation": "Physical Resource Block utilization is exceeding capacity thresholds, indicating high simultaneous user demand or heavy scheduler load.",
+      "recommended_checks": [
+        "Analyze busy-hour traffic volume and active user count (RRC connected users)",
+        "Evaluate carrier aggregation (CA) and multi-band traffic offloading opportunities",
+        "Tune cell reselection and idle-mode camping priorities to distribute traffic to underutilized layers"
+      ]
+    },
+    {
+      "rule_id": "RULE_CAP_002",
+      "name": "Downlink Throughput Collapse",
+      "category": "Capacity",
+      "conditions": [
+        {
+          "kpi": "dl_throughput",
+          "operator": "<",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "WARNING",
+      "explanation": "Downlink user throughput is below target performance, impacting user experience and application latency.",
+      "recommended_checks": [
+        "Check whether throughput degradation correlates with PRB saturation (capacity) or poor SINR (modulation)",
+        "Review scheduler fairness algorithms and QoS class identifier (QCI) priority handling",
+        "Inspect transport link rate limitations"
+      ]
+    },
+    {
+      "rule_id": "RULE_CAP_003",
+      "name": "Uplink Throughput Starvation",
+      "category": "Capacity",
+      "conditions": [
+        {
+          "kpi": "ul_throughput",
+          "operator": "<",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "WARNING",
+      "explanation": "Uplink throughput is degraded, indicating excessive uplink noise rise, user power limitation at cell edge, or UL PRB congestion.",
+      "recommended_checks": [
+        "Inspect uplink interference over thermal (IoT) and rise-over-thermal (RoT)",
+        "Review UE power headroom reporting (PHR)",
+        "Verify uplink power control parameters (P0_nominal_pusch, alpha)"
+      ]
+    },
+    {
+      "rule_id": "RULE_ACC_001",
+      "name": "Cell outage, radio link failure, or transmission issue",
+      "category": "Accessibility",
+      "conditions": [
+        {
+          "kpi": "availability",
+          "operator": "<",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "CRITICAL",
+      "explanation": "Cell operational availability is severely compromised, indicating partial or complete sector outage.",
+      "recommended_checks": [
+        "Check transmission link alarms",
+        "Inspect baseband hardware status",
+        "Verify site power and GPS synchronization"
+      ]
+    },
+    {
+      "rule_id": "RULE_RET_001",
+      "name": "Elevated Call Drop Rate (Retainability Breach)",
+      "category": "Retainability",
+      "conditions": [
+        {
+          "kpi": "call_drop_rate",
+          "operator": ">",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "CRITICAL",
+      "explanation": "Call drop rate exceeds permissible quality bounds, causing premature connection termination for voice and data sessions.",
+      "recommended_checks": [
+        "Audit radio link failure (RLF) triggers and timer T310/T311 settings",
+        "Investigate missing neighbor cell configurations leading to handover failures",
+        "Check for sudden coverage drops at sector boundaries or unexpected RF shadows"
+      ]
+    },
+    {
+      "rule_id": "RULE_MOB_001",
+      "name": "Handover Execution Failure (Mobility Problem)",
+      "category": "Mobility",
+      "conditions": [
+        {
+          "kpi": "handover_success_rate",
+          "operator": "<",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "WARNING",
+      "explanation": "Handover success rate is degraded, indicating failed mobility transitions to target neighbor cells.",
+      "recommended_checks": [
+        "Audit neighbor relations and verify X2/Xn interface connectivity with adjacent sites",
+        "Review handover hysteresis (Hys), time-to-trigger (TTT), and A3 offset thresholds",
+        "Check target cell admission control and target cell congestion levels"
+      ]
+    },
+    {
+      "rule_id": "RULE_TRN_001",
+      "name": "High Backhaul Transport Latency",
+      "category": "Transport",
+      "conditions": [
+        {
+          "kpi": "latency",
+          "operator": ">",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "WARNING",
+      "explanation": "Transport plane round-trip latency exceeds telecom threshold, impacting TCP window scaling and time-critical radio signaling.",
+      "recommended_checks": [
+        "Inspect IP backhaul / microwave / fiber link latency and jitter metrics",
+        "Review router and switch interface buffer queues and congestion drop statistics",
+        "Validate DiffServ / DSCP QoS mapping between RAN baseband and IP transport"
+      ]
+    },
+    {
+      "rule_id": "RULE_TRN_002",
+      "name": "Backhaul Packet Loss Degradation",
+      "category": "Transport",
+      "conditions": [
+        {
+          "kpi": "packet_loss",
+          "operator": ">",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "WARNING",
+      "explanation": "Transport packet loss is elevated, causing retransmissions, degraded throughput, and signaling timeouts.",
+      "recommended_checks": [
+        "Check for physical optical fiber degradation or microwave fading events",
+        "Inspect Ethernet interface CRC errors, duplex mismatches, and queue overflows",
+        "Verify backhaul bandwidth provisioning versus peak cell aggregated throughput"
+      ]
+    },
+    {
+      "rule_id": "RULE_RCA_COV_INTERF",
+      "name": "Coverage degradation or interference / poor radio conditions",
+      "category": "Multi-Domain RCA",
+      "conditions": [
+        {
+          "kpi": "rsrp",
+          "operator": "<",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        },
+        {
+          "kpi": "sinr",
+          "operator": "<",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "CRITICAL",
+      "explanation": "Both RSRP and SINR are degraded simultaneously, indicating severe coverage edge conditions compounded by high co-channel interference or misdirected antenna lobes.",
+      "recommended_checks": [
+        "Check antenna, feeder, and radio alarms",
+        "Compare RSRP/SINR with neighboring cells",
+        "Review interference indicators"
+      ]
+    },
+    {
+      "rule_id": "RULE_RCA_CONGESTION",
+      "name": "Congestion or capacity limitation",
+      "category": "Multi-Domain RCA",
+      "conditions": [
+        {
+          "kpi": "prb_utilization",
+          "operator": ">",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        },
+        {
+          "kpi": "dl_throughput",
+          "operator": "<",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "CRITICAL",
+      "explanation": "High PRB utilization coincides with low throughput, confirming that the cell is experiencing severe traffic congestion rather than poor radio link quality.",
+      "recommended_checks": [
+        "Compare busy-hour PRB utilization",
+        "Check traffic distribution to neighbors",
+        "Review carrier and scheduler capacity"
+      ]
+    },
+    {
+      "rule_id": "RULE_RCA_MOBILITY",
+      "name": "Mobility or handover problem",
+      "category": "Multi-Domain RCA",
+      "conditions": [
+        {
+          "kpi": "call_drop_rate",
+          "operator": ">",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        },
+        {
+          "kpi": "handover_success_rate",
+          "operator": "<",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "all",
+      "severity": "CRITICAL",
+      "explanation": "High call drop rate combined with low handover success rate indicates that calls are dropping during or immediately following failed handover attempts.",
+      "recommended_checks": [
+        "Validate neighbor relations",
+        "Review handover failures and parameters",
+        "Check coverage overlap"
+      ]
+    },
+    {
+      "rule_id": "RULE_RCA_TRANSPORT",
+      "name": "Transport or backhaul network degradation",
+      "category": "Multi-Domain RCA",
+      "conditions": [
+        {
+          "kpi": "latency",
+          "operator": ">",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        },
+        {
+          "kpi": "packet_loss",
+          "operator": ">",
+          "threshold_status": ["WARNING", "CRITICAL"]
+        }
+      ],
+      "match_mode": "any",
+      "severity": "WARNING",
+      "explanation": "Elevated backhaul latency or packet loss is impairing RAN user and control plane performance.",
+      "recommended_checks": [
+        "Check backhaul jitter and latency",
+        "Inspect router/switch interface discards",
+        "Verify transport QoS policy"
+      ]
+    }
+  ]
+}
+

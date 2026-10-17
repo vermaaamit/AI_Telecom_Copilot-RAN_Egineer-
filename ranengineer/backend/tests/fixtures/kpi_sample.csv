@@ -1,0 +1,4 @@
+cell_id,site_id,technology,RSRP,SINR,DL_Throughput,PRB_Utilization,Call_Drop_Rate,Availability
+CELL102,SITE10,4G,-116,3,2,97,3.1,97.4
+CELL105,SITE10,4G,-87,18,45,43,0.1,99.8
+CELL221,SITE22,5G,-101,7,8,92,0.7,98.7

@@ -1,0 +1,4 @@
+cell_id,site_id,technology,RSRP,RSRQ,SINR,CQI,DL_Throughput,UL_Throughput,PRB_Utilization,Availability,Call_Drop_Rate,Handover_Success_Rate,Latency,Packet_Loss,notes
+CELL_CONGESTION_02,SITE_STADIUM,5G_NR,-85,-11,14,10,1.8,0.8,96,99.8,1.8,97.0,120,2.1,Severe PRB congestion in high capacity venue
+CELL_NORMAL_02,SITE_STADIUM,5G_NR,-80,-8,18,12,95.0,34.0,45,99.9,0.2,98.8,12,0.1,Normal reference sector
+

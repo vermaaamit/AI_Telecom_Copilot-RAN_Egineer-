@@ -1,0 +1,115 @@
+{
+  "_metadata": {
+    "data_type": "SYNTHETIC_TEST_DATA",
+    "description": "Synthetic alarm dataset for AI Telecom Copilot – RAN Engineer Phase 1 testing.",
+    "warning": "These are synthetic alarms. Never present as real operational network alarms.",
+    "source": "SYNTHETIC_TEST_DATA",
+    "created_at": "2026-10-08T00:00:00Z"
+  },
+  "alarms": [
+    {
+      "alarm_id": "SYN-ALM-001",
+      "site_id": "SITE_D",
+      "cell_id": "CELL_CRIT_07",
+      "technology": "LTE",
+      "alarm_type": "HIGH_PRB_UTILIZATION",
+      "severity": "CRITICAL",
+      "status": "ACTIVE",
+      "started_at": "2026-10-08T08:00:00Z",
+      "ended_at": null,
+      "description": "PRB utilization has exceeded the CRITICAL threshold (97%). Cell may be experiencing capacity congestion.",
+      "source": "SYNTHETIC_TEST_DATA",
+      "synthetic": true
+    },
+    {
+      "alarm_id": "SYN-ALM-002",
+      "site_id": "SITE_D",
+      "cell_id": "CELL_CRIT_07",
+      "technology": "LTE",
+      "alarm_type": "LOW_THROUGHPUT",
+      "severity": "CRITICAL",
+      "status": "ACTIVE",
+      "started_at": "2026-10-08T08:05:00Z",
+      "ended_at": null,
+      "description": "DL throughput has dropped to 2 Mbps (CRITICAL threshold). Possible congestion or radio issue.",
+      "source": "SYNTHETIC_TEST_DATA",
+      "synthetic": true
+    },
+    {
+      "alarm_id": "SYN-ALM-003",
+      "site_id": "SITE_E",
+      "cell_id": "CELL_CRIT_10",
+      "technology": "LTE",
+      "alarm_type": "POOR_RADIO_QUALITY",
+      "severity": "CRITICAL",
+      "status": "ACTIVE",
+      "started_at": "2026-10-08T07:30:00Z",
+      "ended_at": null,
+      "description": "RSRP = -112 dBm and SINR = 2 dB detected. Possible coverage hole or antenna/feeder fault.",
+      "source": "SYNTHETIC_TEST_DATA",
+      "synthetic": true
+    },
+    {
+      "alarm_id": "SYN-ALM-004",
+      "site_id": "SITE_G",
+      "cell_id": "CELL_MOBILE_13",
+      "technology": "LTE",
+      "alarm_type": "HIGH_CALL_DROP",
+      "severity": "MAJOR",
+      "status": "ACTIVE",
+      "started_at": "2026-10-08T09:00:00Z",
+      "ended_at": null,
+      "description": "Call drop rate at 3.5% exceeds MAJOR threshold. Review neighbor relations and handover parameters.",
+      "source": "SYNTHETIC_TEST_DATA",
+      "synthetic": true
+    },
+    {
+      "alarm_id": "SYN-ALM-005",
+      "site_id": "SITE_G",
+      "cell_id": "CELL_MOBILE_14",
+      "technology": "LTE",
+      "alarm_type": "HANDOVER_FAILURE",
+      "severity": "MAJOR",
+      "status": "ACTIVE",
+      "started_at": "2026-10-08T09:15:00Z",
+      "ended_at": null,
+      "description": "Handover success rate at 76%. Intra-frequency or inter-frequency handover failures detected.",
+      "source": "SYNTHETIC_TEST_DATA",
+      "synthetic": true
+    },
+    {
+      "alarm_id": "SYN-ALM-006",
+      "site_id": "SITE_F",
+      "cell_id": "CELL_AVAIL_12",
+      "technology": "5G_NR",
+      "alarm_type": "CELL_UNAVAILABLE",
+      "severity": "CRITICAL",
+      "status": "ACTIVE",
+      "started_at": "2026-10-08T06:00:00Z",
+      "ended_at": null,
+      "description": "Cell availability dropped to 68%. Possible cell outage, power fault, or configuration error.",
+      "source": "SYNTHETIC_TEST_DATA",
+      "synthetic": true
+    },
+    {
+      "alarm_id": "SYN-SEC-001",
+      "site_id": null,
+      "cell_id": null,
+      "technology": null,
+      "alarm_type": "SUSPICIOUS_FILE_UPLOAD",
+      "severity": "CRITICAL",
+      "status": "ACTIVE",
+      "started_at": "2026-10-08T10:00:00Z",
+      "ended_at": null,
+      "description": "Suspicious file upload detected and blocked. File failed security scanning.",
+      "source": "SYNTHETIC_TEST_DATA",
+      "metadata": {
+        "filename": "malware_test.csv",
+        "action": "BLOCKED",
+        "reason": "Test malware trigger detected"
+      },
+      "synthetic": true
+    }
+  ]
+}
+

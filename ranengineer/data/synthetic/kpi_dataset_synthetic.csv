@@ -1,0 +1,22 @@
+cell_id,site_id,technology,RSRP,RSRQ,SINR,CQI,DL_Throughput,UL_Throughput,PRB_Utilization,Availability,Call_Drop_Rate,Handover_Success_Rate,Latency,Packet_Loss,notes
+CELL_HEALTHY_01,SITE_A,LTE,-75,-8,18,12,85.5,32.1,42,99.9,0.2,98.5,15,0.1,Healthy cell all KPIs good
+CELL_HEALTHY_02,SITE_A,5G_NR,-72,-7,22,14,120.3,45.0,38,99.8,0.1,99.1,10,0.05,Healthy 5G cell
+CELL_HEALTHY_03,SITE_B,LTE,-80,-9,15,11,70.2,28.5,50,99.5,0.3,97.8,18,0.2,Healthy cell slight PRB load
+CELL_WARN_04,SITE_B,LTE,-95,-12,9,8,35.0,14.0,68,98.5,0.8,95.0,28,0.5,Warning - degraded RSRP and SINR
+CELL_WARN_05,SITE_C,5G_NR,-88,-11,11,9,50.0,20.0,75,97.8,1.2,93.5,35,0.8,Warning - moderate congestion
+CELL_WARN_06,SITE_C,LTE,-92,-13,8,7,28.0,10.0,78,97.0,1.5,92.0,40,1.0,Warning - multiple degraded KPIs
+CELL_CRIT_07,SITE_D,LTE,-116,-18,3,4,2.0,1.0,97,97.4,3.1,88.0,80,2.5,CRITICAL - poor coverage and congestion
+CELL_CRIT_08,SITE_D,5G_NR,-108,-16,5,5,8.0,3.0,92,96.8,2.5,85.0,65,3.0,CRITICAL - high PRB and poor radio
+CELL_CRIT_09,SITE_E,LTE,-101,-15,7,6,8.0,4.0,92,98.7,0.7,91.0,55,1.8,CRITICAL - capacity issue
+CELL_CRIT_10,SITE_E,LTE,-112,-17,2,3,3.0,1.5,95,94.5,4.2,80.0,90,4.5,CRITICAL - very poor radio quality
+CELL_AVAIL_11,SITE_F,LTE,-82,-9,14,10,60.0,25.0,55,72.5,0.5,96.5,22,0.3,Low availability - possible cell outage
+CELL_AVAIL_12,SITE_F,5G_NR,-78,-8,16,11,75.0,30.0,48,68.0,0.4,97.0,18,0.2,CRITICAL low availability
+CELL_MOBILE_13,SITE_G,LTE,-85,-10,12,9,45.0,18.0,60,99.2,3.5,78.5,30,0.6,Mobility issue - high call drop
+CELL_MOBILE_14,SITE_G,LTE,-83,-10,13,10,48.0,19.0,58,99.0,3.8,76.0,32,0.7,Mobility issue - poor handover
+CELL_TRANSPORT_15,SITE_H,5G_NR,-76,-8,17,12,90.0,35.0,45,99.5,0.2,98.8,180,8.5,Transport/backhaul issue - high latency
+CELL_TRANSPORT_16,SITE_H,LTE,-79,-9,15,11,65.0,26.0,50,99.3,0.3,98.2,150,6.2,Transport issue - packet loss
+CELL_MISSING_KPI_17,SITE_I,LTE,-88,-11,10,,42.0,,70,98.5,0.9,,25,0.4,Missing CQI UL_Throughput Handover
+CELL_UNKNOWN_COL_18,SITE_I,LTE,-90,-12,9,8,38.0,15.0,72,98.0,1.1,94.0,28,0.5,Row with known KPIs
+CELL_MIXED_TECH_19,SITE_J,O_RAN,-84,-10,12,9,55.0,22.0,62,99.1,0.6,96.0,20,0.3,O-RAN technology
+CELL_MIXED_TECH_20,SITE_J,OTHER,-86,-11,11,8,45.0,18.0,65,98.8,0.8,95.0,24,0.4,OTHER technology
+
