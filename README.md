@@ -2,21 +2,6 @@
 
 AI Telecom Copilot is a production-oriented assistant for 4G/5G/O-RAN engineering. Its first working capability is a deterministic KPI CSV analyzer: upload a KPI export, validate and normalize it, score cells, identify underperformers, and surface rule-based **probable causes**.
 
-## Repository layout
-
-```text
-.
-├── cicd-script/                 # Build, test, and deployment entrypoints
-└── ranengineer/
-    ├── frontend/                # Next.js + TypeScript dashboard
-    ├── backend/                 # Modular FastAPI MVP
-    ├── analytics-engine/        # Future shared analytics pipeline modules
-    ├── knowledge-base/          # Curated 4G, 5G, RAN, and O-RAN knowledge
-    ├── database/                # Migrations, schemas, and seed data
-    ├── configs/                 # Versioned KPI configuration
-    ├── tests/                   # Cross-service tests
-    ├── deployments/             # Docker and Kubernetes assets
-    └── docs/                    # Architecture and API documentation
 ```
 
 ## Run locally
