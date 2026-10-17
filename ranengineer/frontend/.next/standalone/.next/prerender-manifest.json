@@ -1,6 +1,30 @@
 {
   "version": 4,
   "routes": {
+    "/cells": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/cells",
+      "dataRoute": "/cells.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/anomalies": {
       "experimentalBypassFor": [
         {
@@ -25,7 +49,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/cells": {
+    "/chat": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -38,8 +62,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/cells",
-      "dataRoute": "/cells.rsc",
+      "srcRoute": "/chat",
+      "dataRoute": "/chat.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -73,30 +97,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/incidents": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/incidents",
-      "dataRoute": "/incidents.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/digital-twin": {
       "experimentalBypassFor": [
         {
@@ -121,7 +121,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/oran": {
+    "/incidents": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -134,8 +134,32 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/oran",
-      "dataRoute": "/oran.rsc",
+      "srcRoute": "/incidents",
+      "dataRoute": "/incidents.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/dashboard": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/dashboard",
+      "dataRoute": "/dashboard.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -160,6 +184,54 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/knowledge",
       "dataRoute": "/knowledge.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/",
+      "dataRoute": "/index.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/oran": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/oran",
+      "dataRoute": "/oran.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -216,85 +288,13 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
-    },
-    "/": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/",
-      "dataRoute": "/index.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/dashboard": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/dashboard",
-      "dataRoute": "/dashboard.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/chat": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/chat",
-      "dataRoute": "/chat.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "a06b3c76183c72d62417d0d956957467",
-    "previewModeSigningKey": "dbb6f0ce722c84ec58366ba57b8c87af2ebf2b848553da904260befefdb376ca",
-    "previewModeEncryptionKey": "3989194d27df426fb629c89d6e9bb9ebdf4e2fb5d146ab6d65c0a3054eaab40b"
+    "previewModeId": "3b37cb0f1f9060017f321aa64afabf44",
+    "previewModeSigningKey": "e67db75faa7daa8b0519c2cea94ddec2cd5a6f028a34491a7991c3239cfce5a9",
+    "previewModeEncryptionKey": "0c98e56e8d84190e60a11d9e37dee37c01072ebeb5c0df7d5de2c9d8a5d3ef56"
   }
 }
