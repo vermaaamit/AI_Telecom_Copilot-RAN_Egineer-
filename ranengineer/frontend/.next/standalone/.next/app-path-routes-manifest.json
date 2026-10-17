@@ -1,17 +1,17 @@
 {
   "/_not-found/page": "/_not-found",
   "/alarms/page": "/alarms",
+  "/cells/[id]/page": "/cells/[id]",
+  "/cells/page": "/cells",
   "/dashboard/page": "/dashboard",
   "/chat/page": "/chat",
-  "/cells/page": "/cells",
-  "/anomalies/page": "/anomalies",
-  "/digital-twin/page": "/digital-twin",
   "/datasets/[id]/page": "/datasets/[id]",
-  "/cells/[id]/page": "/cells/[id]",
+  "/digital-twin/page": "/digital-twin",
+  "/anomalies/page": "/anomalies",
   "/datasets/page": "/datasets",
-  "/incidents/page": "/incidents",
-  "/settings/page": "/settings",
   "/knowledge/page": "/knowledge",
+  "/incidents/page": "/incidents",
   "/oran/page": "/oran",
-  "/page": "/"
+  "/page": "/",
+  "/settings/page": "/settings"
 }

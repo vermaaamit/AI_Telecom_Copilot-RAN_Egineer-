@@ -1,4 +1,4 @@
-// File: /home/amitverma/Desktop/project/AI_Telecom_Copilot-RAN_Egineer/ranengineer/frontend/src/app/dashboard/page.tsx
+// File: /home/amitverma/Desktop/GITHUB/AI_Telecom_Copilot-RAN_Egineer-/ranengineer/frontend/src/app/dashboard/page.tsx
 import * as entry from '../../../../src/app/dashboard/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

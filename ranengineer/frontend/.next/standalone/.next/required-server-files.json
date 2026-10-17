@@ -97,7 +97,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "/home/amitverma/Desktop/project/AI_Telecom_Copilot-RAN_Egineer/ranengineer/frontend",
+    "outputFileTracingRoot": "/home/amitverma/Desktop/GITHUB/AI_Telecom_Copilot-RAN_Egineer-/ranengineer/frontend",
     "experimental": {
       "nodeMiddleware": false,
       "cacheLife": {
@@ -175,7 +175,7 @@
       "forceSwcTransforms": false,
       "largePageDataBytes": 128000,
       "turbo": {
-        "root": "/home/amitverma/Desktop/project/AI_Telecom_Copilot-RAN_Egineer/ranengineer/frontend"
+        "root": "/home/amitverma/Desktop/GITHUB/AI_Telecom_Copilot-RAN_Egineer-/ranengineer/frontend"
       },
       "typedRoutes": false,
       "typedEnv": false,
@@ -281,7 +281,7 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts"
   },
-  "appDir": "/home/amitverma/Desktop/project/AI_Telecom_Copilot-RAN_Egineer/ranengineer/frontend",
+  "appDir": "/home/amitverma/Desktop/GITHUB/AI_Telecom_Copilot-RAN_Egineer-/ranengineer/frontend",
   "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",
